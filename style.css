@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg ,#0d1b2a ,#1b263b ,#415a77 ,#778da9 );
+    overflow: hidden;
+}
+
+.ContainAll{
+    height: 91%;
+    width: 91%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border: 3px solid black;
+    border-radius: 50px;
+    border-bottom-right-radius: 0;
+
+    background: linear-gradient(135deg ,#778da9 ,#415a77,#1a202b,#060708);
+
+    box-shadow: 0px 0px 8px #dee2e6;
+    position: relative;
+}
+
+.ContainAll::after {
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: -1;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+
+    animation: lightEffect 1s linear infinite;
+}
+
+.ContainAll::before{
+    content: "";
+    height: 1vmax;
+    width: 1vmax;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+
+    animation: scale 0.5s ease-in-out infinite;
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2.5);
+    }
+    100%{
+        transform: scale(4);
+    }
+}
+
+@keyframes lightEffect {
+    0% {
+        top: 100%;
+        left: 100%;
+    }
+    25% {
+        top: 100%;
+        left: -2%;
+    }
+    50% {
+        top: -3%;
+        left: -3%;
+    }
+    75% {
+        top: -4%;
+        left: 100%;
+    }
+    100% {
+        top: 100%;
+        left: 100%;
+    }
+}
+
+.container{
+    filter: drop-shadow(0px 0px 5px white);
+}
+
+.container:hover{
+    filter: drop-shadow(0px 0px 5px black);
+}
+
+h1{
+    position: absolute;
+    top: 0;
+    text-align: center;
+    font-size: 4vmax;
+    color: #fff;
+    
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+pre{
+    font-size: 1.5vmax;
+    padding-top: 2.3vmax;
+    padding-bottom: 1.13vmax;
+    padding-left: 0.3vmax;
+
+    
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: bisque;
+    border: 1px solid black;
+}
+
+div{
+    display: inline-block;
+}
+
+.btn{
+    font-size: 3vmax;
+    padding: 0.8vmax;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 2px solid black;
+
+    background-color: #003554;
+    color: white;
+    outline: none;
+    margin-right: 0;
+}
+
+.Animate::after {
+    content: "|";
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+
+.one{
+    position: absolute;
+    top: 30%;
+    left: 18%;
+}
+.two{
+    position: absolute;
+    top: 47%;
+    left: 27%;
+}
+.three{
+    position: absolute;
+    top: 66%;
+    left: 18%;
+}
+.four{
+    position: absolute;
+    top: 84%;
+    left: 27%;
+}
+
+.ScaleAni{
+    animation: scaling 3s ease-in-out infinite;
+}
+
+@keyframes scaling{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.logo{
+    font-size: 5vmax;
+    height: 3vmax;
+    width: 4vmax;
+    display: inline-block;
+}
+
+.logo img:hover{
+    filter: drop-shadow(0px 0px 5px white);
+}
+.logo p{
+    filter: drop-shadow(0px 0px 5px white);
+}
+
+.logo img{
+    height: 4.5vmax;
+    height: 4.5vmax;
+}
+
+.logo p{
+    font-size: 1vmax;
+}
+
+#instagram{
+    position: absolute;
+    top: 15%;
+    right: 80%;
+}
+
+#linkedin{
+    position: absolute;
+    top: 15%;
+    right: 60%;
+}
+
+#github{
+    position: absolute;
+    top: 15%;
+    right: 38%;
+}
+
+#twitter{
+    position: absolute;
+    top: 15%;
+    right: 18%;
+}
+
+
+#instagram p{
+    position: relative;
+    bottom: 1.5vmax;
+    left: 0.2vmax;
+}
+
+#linkedin p{
+    position: relative;
+    bottom: 1.2vmax;
+    left: 0.4vmax;
+}
+
+#github p{
+    position: relative;
+    bottom: 1.5vmax;
+    left: 0.9vmax;
+}
+
+#twitter p{
+    position: relative;
+    bottom: 1.4vmax;
+    left: 0.6vmax;
+}
